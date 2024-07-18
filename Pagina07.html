@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Renato David Valente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .contact-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 20px;
+        }
+        .contact-links a:hover {
+            color: #0056b3;
+        }
+        .calendar, .calculator, .charts {
+            margin-top: 20px;
+        }
+        .calculator input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .calculator button {
+            width: 23%;
+            padding: 10px;
+            margin: 5px 1%;
+            font-size: 18px;
+        }
+        .login-form, .data-entry-form, .charts {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contato - Renato David Valente</h1>
+        <form action="mailto:renatovalente3838@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <div class="contact-links">
+            <a href="https://web.whatsapp.com/" target="_blank">WhatsApp</a>
+            <a href="https://www.linkedin.com/in/renato-valente-85a081299/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="calendar">
+            <h2>Calendário</h2>
+            <input type="text" id="datepicker" class="form-control">
+        </div>
+        <div class="calculator">
+            <h2>Calculadora</h2>
+            <input type="text" id="calc-display" class="form-control" disabled>
+            <div class="buttons">
+                <button class="btn btn-secondary" onclick="appendNumber(7)">7</button>
+                <button class="btn btn-secondary" onclick="appendNumber(8)">8</button>
+                <button class="btn btn-secondary" onclick="appendNumber(9)">9</button>
+                <button class="btn btn-warning" onclick="appendOperator('/')">/</button>
+                <button class="btn btn-secondary" onclick="appendNumber(4)">4</button>
+                <button class="btn btn-secondary" onclick="appendNumber(5)">5</button>
+                <button class="btn btn-secondary" onclick="appendNumber(6)">6</button>
+                <button class="btn btn-warning" onclick="appendOperator('*')">*</button>
+                <button class="btn btn-secondary" onclick="appendNumber(1)">1</button>
+                <button class="btn btn-secondary" onclick="appendNumber(2)">2</button>
+                <button class="btn btn-secondary" onclick="appendNumber(3)">3</button>
+                <button class="btn btn-warning" onclick="appendOperator('-')">-</button>
+                <button class="btn btn-secondary" onclick="appendNumber(0)">0</button>
+                <button class="btn btn-secondary" onclick="appendOperator('.')">.</button>
+                <button class="btn btn-danger" onclick="clearDisplay()">C</button>
+                <button class="btn btn-success" onclick="calculate()">=</button>
+                <button class="btn btn-warning" onclick="appendOperator('+')">+</button>
+            </div>
+        </div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" class="form-control">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" class="form-control">
+            <button class="btn btn-primary" onclick="login()">Login</button>
+        </div>
+        <div class="data-entry-form">
+            <h2>Inserir Dados</h2>
+            <label for="data">Dados:</label>
+            <input type="text" id="data" class="form-control">
+            <button class="btn btn-primary" onclick="addData()">Adicionar Dados</button>
+        </div>
+        <div class="charts">
+            <h2>Gráficos</h2>
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#datepicker').datepicker();
+        });
+
+        function appendNumber(number) {
+            document.getElementById('calc-display').value += number;
+        }
+
+        function appendOperator(operator) {
+            document.getElementById('calc-display').value += operator;
+        }
+
+        function clearDisplay() {
+            document.getElementById('calc-display').value = '';
+        }
+
+        function calculate() {
+            try {
+                let result = eval(document.getElementById('calc-display').value);
+                document.getElementById('calc-display').value = result;
+            } catch (e) {
+                document.getElementById('calc-display').value = 'Erro';
+            }
+        }
+
+        // Simples sistema de login
+        const validUsername = 'Renato';
+        const validPassword = '1234';
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === validUsername && password === validPassword) {
+                document.querySelector('.login-form').style.display = 'none';
+                document.querySelector('.data-entry-form').style.display = 'block';
+                document.querySelector('.charts').style.display = 'block';
+                renderChart();
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+        }
+
+        let chartData = [12, 19, 3, 5, 2, 3];
+        let chartLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+        let myChart;
+
+        function addData() {
+            const data = document.getElementById('data').value;
+            if (data) {
+                chartData.push(Number(data));
+                chartLabels.push('New');
+                renderChart();
+            }
+        }
+
+        function renderChart() {
+            const ctx = document.getElementById('myChart').getContext('2d');
+            if (myChart) {
+                myChart.destroy();
+            }
+            myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        label: 'Índice da Escola',
+                        data: chartData,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

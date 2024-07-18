@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicudodo-2024</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://curriculorenatovalente2024.my.canva.site/white-black-elegant-modern-corporate-cv-resume-tamanho-original">Renato Valente</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Inicial- Provas Online 3ºBimestre
+        </a>
+        <div class="dropdown-menu" aria-labelledby="homeDropdown">
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('Tecnologia3A', 'Pagina10.html')">Tecnologia 3ºA anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('Tecnologia2B', 'Pagina11.html')">Tecnologia 2ºB anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('Matematica7A', 'Pagina12.html')">Matematica 7ºA anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('Matematica7B', 'Pagina13.html')">Matematica 7ºB anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('Fisica1A', 'Pagina14.html')">Fisica 1ºA anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('Fisica1B', 'Pagina15.html')">Fisica 1ºB anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('Fisica1C', 'Pagina16.html')">Fisica 1ºC anos</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Evidências-Trabalho
+        </a>
+        <div class="dropdown-menu" aria-labelledby="featuresDropdown">
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('EvidenciasTecnologia', 'Pagina01.html')">Tecnologia 2º e 3º anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('EvidenciasMatematica', 'Pagina02.html')">Matematica 7º anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('EvidenciasFisica', 'Pagina03.html')">Fisica 1º anos</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal" onclick="setRedirect('EvidenciasAplicativos', 'Pagina04.html')">Aplicativos</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pricingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Eventos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+          <a class="dropdown-item" href="Pagina05.html">Festa-Junina</a>
+          <a class="dropdown-item" href="Pagina06.html">Aluno-Destaque</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="disabledDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contato
+        </a>
+        <div class="dropdown-menu" aria-labelledby="disabledDropdown">
+          <a class="dropdown-item" href="Pagina07.html">Contatos</a>
+          <a class="dropdown-item" href="#"></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="disabledDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Índice
+        </a>
+        <div class="dropdown-menu" aria-labelledby="disabledDropdown">
+          <a class="dropdown-item" href="https://curriculorenatovalente2024.my.canva.site/resultados">Índice</a>
+          <a class="dropdown-item" href="#"></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<img src="Black Minimalist Channel YouTube Intro Video (7).gif" alt="">
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Usuário</label>
+            <input type="text" class="form-control" id="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="password" required>
+          </div>
+          <div class="form-group">
+            <div id="errorMsg" class="text-danger"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  const credentials = {
+    'Tecnologia3A': { username: 'user3A', password: 'pass3A' },
+    'Tecnologia2B': { username: 'user2B', password: 'pass2B' },
+    'Matematica7A': { username: 'user7A', password: 'pass7A' },
+    'Matematica7B': { username: 'user7B', password: 'pass7B' },
+    'Fisica1A': { username: 'user1A', password: 'pass1A' },
+    'Fisica1B': { username: 'user1B', password: 'pass1B' },
+    'Fisica1C': { username: 'user1C', password: 'pass1C' },
+    'EvidenciasTecnologia': { username: 'Renato', password: '28/08/2024' },
+    'EvidenciasMatematica': { username: 'Renato', password: '28/08/2024' },
+    'EvidenciasFisica': { username: 'Renato', password: '28/08/2024' },
+    'EvidenciasAplicativos': { username: 'Renato', password: '28/08/2024' }
+  };
+
+  function setRedirect(classKey, page) {
+    document.getElementById('loginForm').onsubmit = function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username === credentials[classKey].username && password === credentials[classKey].password) {
+        window.location.href = page;
+      } else {
+        document.getElementById('errorMsg').innerText = 'Usuário ou senha incorretos';
+      }
+    };
+  }
+</script>
+
+</body>
+</html>

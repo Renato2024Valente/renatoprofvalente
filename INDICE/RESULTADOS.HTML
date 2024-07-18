@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índices de Resultados - Renato David Valente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .login-form, .data-entry-form, .charts {
+            display: none;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .chart-container {
+            position: relative;
+            margin: 20px 0;
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Índices de Resultados</h1>
+        
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" class="form-control">
+            </div>
+            <button class="btn btn-primary" onclick="login()">Login</button>
+        </div>
+        
+        <!-- Data Entry Form -->
+        <div class="data-entry-form">
+            <h2>Inserir Dados</h2>
+            <div class="form-group">
+                <label for="label">Mês:</label>
+                <input type="text" id="label" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="data">Valor:</label>
+                <input type="number" id="data" class="form-control">
+            </div>
+            <button class="btn btn-primary" onclick="addData()">Adicionar Dados</button>
+        </div>
+        
+        <!-- Charts -->
+        <div class="charts">
+            <h2>Gráficos</h2>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simples sistema de login
+        const validUsername = 'admin';
+        const validPassword = '12345';
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === validUsername && password === validPassword) {
+                document.querySelector('.login-form').style.display = 'none';
+                document.querySelector('.data-entry-form').style.display = 'block';
+                document.querySelector('.charts').style.display = 'block';
+                renderCharts();
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+        }
+
+        let chartData = [12, 19, 3, 5, 2, 3];
+        let chartLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+
+        function addData() {
+            const label = document.getElementById('label').value;
+            const data = document.getElementById('data').value;
+            if (label && data) {
+                chartLabels.push(label);
+                chartData.push(Number(data));
+                renderCharts();
+            }
+        }
+
+''        function renderCharts() {
+            // Bar Chart
+            const barCtx = document.getElementById('barChart').getContext('2d');
+            new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        label: 'Valores',
+                        data: chartData,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Line Chart
+            const lineCtx = document.getElementById('lineChart').getContext('2d');
+            new Chart(lineCtx, {
+                type: 'line',
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        label: 'Valores',
+                        data: chartData,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Pie Chart
+            const pieCtx = document.getElementById('pieChart').getContext('2d');
+            new Chart(pieCtx, {
+                type: 'pie',
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        label: 'Valores',
+                        data: chartData,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                }
+            });
+        }
+
+        // Inicializa o formulário de login
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.login-form').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

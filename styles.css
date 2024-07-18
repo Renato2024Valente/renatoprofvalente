@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('3.gif');
+    background-size: cover; /* Makes the background image cover the whole background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Ensures the background image covers the full height of the viewport */
+    margin: 0;
+    padding: 0;
+}
+.calendar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.calendar h4 {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+.calendar p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+.navbar-nav {
+    flex-direction: row;
+}
+.navbar-nav .nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding-right: 1rem;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #007bff;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #0056b3;
+}
+
+.navbar-nav .dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .dropdown-item {
+    font-size: 1rem;
+    color: #333;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.container {
+    margin-top: 2rem;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}

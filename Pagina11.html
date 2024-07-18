@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de Física</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #quiz-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+        }
+        .option {
+            display: block;
+            margin: 10px 0;
+            width: calc(100% - 20px);
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+        }
+        .option:hover {
+            background-color: #0056b3;
+        }
+        #timer {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #question {
+            margin-bottom: 20px;
+        }
+        #intro, #quiz, #results, #unblock {
+            display: none;
+        }
+        input[type="text"], input[type="password"], input[type="number"], input[type="string"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="intro">
+            <h2>Bem-vindo à Prova de Física</h2>
+            <p>Por favor, insira seu nome e série para começar.</p>
+            <input type="text" id="studentName" placeholder="Seu nome" required>
+            <input type="text" id="studentGrade" placeholder="Sua série (ex: 1ºA)" required>
+            <button onclick="startQuiz()">Começar Prova</button>
+        </div>
+        <div id="quiz">
+            <div id="timer">Tempo: 90.0 segundos</div>
+            <div id="question"></div>
+            <div id="options"></div>
+        </div>
+        <div id="results">
+            <h2>Prova finalizada!</h2>
+            <p id="studentInfo"></p>
+            <p id="score"></p>
+            <p id="grade"></p>
+            <p id="wrongAnswers"></p>
+            <button id="sendWhatsApp">Enviar Resultados pelo WhatsApp</button>
+        </div>
+        <div id="unblock">
+            <h2>Desbloquear Aluno</h2>
+            <p>Insira o nome do aluno e a senha para desbloquear.</p>
+            <input type="text" id="unblockStudentName" placeholder="Nome do aluno" required>
+            <input type="password" id="unblockPassword" placeholder="Senha" required>
+            <button onclick="unblockStudent()">Desbloquear</button>
+        </div>
+        <button onclick="showUnblock()">Desbloquear Aluno</button>
+    </div>
+    <script>
+        const professorPassword = "1234"; // Substitua pela senha desejada
+
+        let questions = [
+            { question: "Qual é a aceleração centrípeta de um objeto que se move a 10 m/s em uma curva de raio 2 m?", options: ["50 m/s²", "5 m/s²", "20 m/s²", "2 m/s²"], answer: 2 },
+            { question: "Um satélite orbita a Terra a uma distância de 20.000 km com um período de 12 horas. Qual é a velocidade orbital?", options: ["3.07 km/s", "1.57 km/s", "7.12 km/s", "5.34 km/s"], answer: 0 },
+            { question: "Qual é o período de rotação de um carrossel que gira com uma velocidade angular de 0.5 rad/s?", options: ["4π s", "2π s", "π s", "6π s"], answer: 1 },
+            { question: "Qual é a força gravitacional entre duas massas de 10 kg cada uma separadas por 1 m?", options: ["6.67 x 10⁻¹¹ N", "6.67 x 10⁻¹⁰ N", "6.67 x 10⁻⁹ N", "6.67 x 10⁻⁸ N"], answer: 0 },
+            { question: "Qual é a frequência de um objeto que dá 5 voltas por segundo?", options: ["5 Hz", "0.2 Hz", "1 Hz", "10 Hz"], answer: 0 },
+            { question: "Um objeto em movimento circular uniforme tem uma velocidade de 20 m/s e um raio de 4 m. Qual é a sua aceleração centrípeta?", options: ["5 m/s²", "50 m/s²", "100 m/s²", "10 m/s²"], answer: 2 },
+            { question: "Qual é a relação entre a velocidade angular (ω) e a frequência (f)?", options: ["ω = 2πf", "ω = πf", "ω = 4πf", "ω = f/2π"], answer: 0 },
+            { question: "Qual é a terceira lei de Kepler?", options: ["Os planetas descrevem órbitas elípticas", "A força de atração é diretamente proporcional à massa", "O quadrado do período orbital é proporcional ao cubo da distância média ao Sol", "A energia é conservada"], answer: 2 },
+            { question: "Um tambor de máquina de lavar tem um raio de 0.5 m e gira a 5 rad/s. Qual é a velocidade tangencial na borda?", options: ["2.5 m/s", "5 m/s", "10 m/s", "1 m/s"], answer: 0 },
+            { question: "Qual é a unidade de medida da frequência no Sistema Internacional de Unidades?", options: ["Segundo", "Hertz", "Newton", "Joule"], answer: 1 }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let startTime;
+        let timerElement, questionElement, optionsElement;
+        let quizCompleted = false;
+        let currentStudentName = '';
+
+        function setup() {
+            noCanvas();
+            timerElement = select('#timer');
+            questionElement = select('#question');
+            optionsElement = select('#options');
+            select('#intro').show();
+        }
+
+        function startQuiz() {
+            const name = select('#studentName').value();
+            const grade = select('#studentGrade').value();
+            currentStudentName = name;
+            let blockedStudents = JSON.parse(localStorage.getItem('blockedStudents')) || [];
+            if (blockedStudents.includes(name)) {
+                alert('Você já completou esta prova e está bloqueado para refazê-la.');
+                return;
+            }
+            if (name && grade) {
+                select('#intro').hide();
+                select('#quiz').show();
+                startTime = millis();
+                nextQuestion();
+            } else {
+                alert('Por favor, insira seu nome e série.');
+            }
+        }
+
+        function draw() {
+            if (select('#quiz').style('display') !== 'none') {
+                let timeLeft = 90 - (millis() - startTime) / 1000;
+                if (timeLeft <= 0 && !quizCompleted) {
+                    quizCompleted = true;
+                    showResults();
+                } else if (timeLeft > 0) {
+                    timerElement.html(`Tempo: ${timeLeft.toFixed(1)} segundos`);
+                }
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length && !quizCompleted) {
+                startTime = millis();
+                let q = questions[currentQuestion];
+                questionElement.html(`Questão ${currentQuestion + 1}: ${q.question}`);
+                optionsElement.html('');
+                for (let i = 0; i < q.options.length; i++) {
+                    let btn = createButton(q.options[i]).class('option').parent(optionsElement);
+                    btn.mousePressed(() => checkAnswer(i));
+                }
+                currentQuestion++;
+            } else {
+                showResults();
+            }
+        }
+
+        function checkAnswer(i) {
+            if (i === questions[currentQuestion - 1].answer) {
+                score++;
+            }
+            nextQuestion();
+        }
+
+        function showResults() {
+            let gradeValue = (score / questions.length) * 10;
+            let wrongAnswers = questions.length - score;
+            const name = select('#studentName').value();
+            const grade = select('#studentGrade').value();
+
+            select('#quiz').hide();
+            select('#results').show();
+            select('#studentInfo').html(`Nome: ${name} - Série: ${grade}`);
+            select('#score').html(`Pontuação: ${score}/${questions.length}`);
+            select('#grade').html(`Nota: ${gradeValue.toFixed(2)}`);
+            select('#wrongAnswers').html(`Quantidade de erradas: ${wrongAnswers}`);
+
+            let blockedStudents = JSON.parse(localStorage.getItem('blockedStudents')) || [];
+            blockedStudents.push(name);
+            localStorage.setItem('blockedStudents', JSON.stringify(blockedStudents));
+
+            select('#sendWhatsApp').mousePressed(() => {
+                html2canvas(document.querySelector("#results")).then(canvas => {
+                    let imgData = canvas.toDataURL("image/jpeg");
+
+                    let link = document.createElement('a');
+                    link.download = 'resultados-prova.jpg';
+                    link.href = imgData;
+                    link.click();
+
+                    const message = `Resultados da prova:\nNome: ${name}\nSérie: ${grade}\nPontuação: ${score}/${questions.length}\nNota: ${gradeValue.toFixed(2)}\nQuantidade de erradas: ${wrongAnswers}`;
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=5514991016098&text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            });
+
+            localStorage.setItem('quizTaken', 'true');
+        }
+
+        function showUnblock() {
+            select('#unblock').show();
+        }
+
+        function unblockStudent() {
+            const name = select('#unblockStudentName').value();
+            const password = select('#unblockPassword').value();
+            if (password === professorPassword) {
+                let blockedStudents = JSON.parse(localStorage.getItem('blockedStudents')) || [];
+                blockedStudents = blockedStudents.filter(student => student !== name);
+                localStorage.setItem('blockedStudents', JSON.stringify(blockedStudents));
+                alert(`O aluno ${name} foi desbloqueado.`);
+            } else {
+                alert('Senha incorreta.');
+            }
+        }
+    </script>
+</body>
+</html>
