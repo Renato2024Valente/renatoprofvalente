@@ -109,16 +109,56 @@
         const professorPassword = "1234"; // Substitua pela senha desejada
 
         let questions = [
-            { question: "Qual é a aceleração centrípeta de um objeto que se move a 10 m/s em uma curva de raio 2 m?", options: ["50 m/s²", "5 m/s²", "20 m/s²", "2 m/s²"], answer: 2 },
-            { question: "Um satélite orbita a Terra a uma distância de 20.000 km com um período de 12 horas. Qual é a velocidade orbital?", options: ["3.07 km/s", "1.57 km/s", "7.12 km/s", "5.34 km/s"], answer: 0 },
-            { question: "Qual é o período de rotação de um carrossel que gira com uma velocidade angular de 0.5 rad/s?", options: ["4π s", "2π s", "π s", "6π s"], answer: 1 },
-            { question: "Qual é a força gravitacional entre duas massas de 10 kg cada uma separadas por 1 m?", options: ["6.67 x 10⁻¹¹ N", "6.67 x 10⁻¹⁰ N", "6.67 x 10⁻⁹ N", "6.67 x 10⁻⁸ N"], answer: 0 },
-            { question: "Qual é a frequência de um objeto que dá 5 voltas por segundo?", options: ["5 Hz", "0.2 Hz", "1 Hz", "10 Hz"], answer: 0 },
-            { question: "Um objeto em movimento circular uniforme tem uma velocidade de 20 m/s e um raio de 4 m. Qual é a sua aceleração centrípeta?", options: ["5 m/s²", "50 m/s²", "100 m/s²", "10 m/s²"], answer: 2 },
-            { question: "Qual é a relação entre a velocidade angular (ω) e a frequência (f)?", options: ["ω = 2πf", "ω = πf", "ω = 4πf", "ω = f/2π"], answer: 0 },
-            { question: "Qual é a terceira lei de Kepler?", options: ["Os planetas descrevem órbitas elípticas", "A força de atração é diretamente proporcional à massa", "O quadrado do período orbital é proporcional ao cubo da distância média ao Sol", "A energia é conservada"], answer: 2 },
-            { question: "Um tambor de máquina de lavar tem um raio de 0.5 m e gira a 5 rad/s. Qual é a velocidade tangencial na borda?", options: ["2.5 m/s", "5 m/s", "10 m/s", "1 m/s"], answer: 0 },
-            { question: "Qual é a unidade de medida da frequência no Sistema Internacional de Unidades?", options: ["Segundo", "Hertz", "Newton", "Joule"], answer: 1 }
+        { 
+            question: "Qual é a energia cinética de um objeto de 5 kg movendo-se a 10 m/s?", 
+            options: ["250 J", "500 J", "1000 J", "1250 J"], 
+            answer: 1 
+        },
+        { 
+            question: "Um carro acelera de 0 a 20 m/s em 4 segundos. Qual é a sua aceleração média?", 
+            options: ["5 m/s²", "10 m/s²", "4 m/s²", "8 m/s²"], 
+            answer: 0 
+        },
+        { 
+            question: "Qual é a força necessária para acelerar um objeto de 10 kg a 5 m/s²?", 
+            options: ["5 N", "10 N", "50 N", "100 N"], 
+            answer: 2 
+        },
+        { 
+            question: "Um objeto é lançado verticalmente para cima com uma velocidade inicial de 30 m/s. Qual é a altura máxima que ele atinge? (Despreze a resistência do ar, g = 10 m/s²)", 
+            options: ["15 m", "45 m", "60 m", "90 m"], 
+            answer: 1 
+        },
+        { 
+            question: "Qual é o trabalho realizado por uma força de 20 N que move um objeto por 5 metros na direção da força?", 
+            options: ["50 J", "100 J", "200 J", "400 J"], 
+            answer: 2 
+        },
+        { 
+            question: "Um objeto de 2 kg está a uma altura de 10 m. Qual é a sua energia potencial gravitacional? (g = 10 m/s²)", 
+            options: ["20 J", "100 J", "200 J", "400 J"], 
+            answer: 2 
+        },
+        { 
+            question: "Um bloco de 5 kg desliza por um plano inclinado sem atrito de 10 metros de altura. Qual é a sua velocidade ao chegar na base? (g = 10 m/s²)", 
+            options: ["10 m/s", "14 m/s", "20 m/s", "28 m/s"], 
+            answer: 1 
+        },
+        { 
+            question: "Qual é o impulso de uma força constante de 30 N aplicada durante 3 segundos?", 
+            options: ["10 Ns", "30 Ns", "60 Ns", "90 Ns"], 
+            answer: 3 
+        },
+        { 
+            question: "Um pêndulo de comprimento 2 m tem um período de oscilação mais próximo de:", 
+            options: ["1 s", "2 s", "3 s", "4 s"], 
+            answer: 1 
+        },
+        { 
+            question: "Qual é a quantidade de calor necessária para elevar a temperatura de 1 kg de água em 10°C? (Calor específico da água = 4.186 J/g°C)", 
+            options: ["4186 J", "41860 J", "418600 J", "4186000 J"], 
+            answer: 2 
+        }  
         ];
 
         let currentQuestion = 0;

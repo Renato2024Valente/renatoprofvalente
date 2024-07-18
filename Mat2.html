@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .answers {
+            display: none;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Prova de Matemática</h1>
+    <p><strong>Nome:</strong> _____________________________________</p>
+    <p><strong>Série:</strong> _____________________________________</p>
+
+    <div class="question">
+        <h3>Questão 1</h3>
+        <p>Um produto sofreu um aumento de 25% custando atualmente R$ 1.000,00. Qual era seu preço antes do aumento?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 2</h3>
+        <p>Uma melancia tem 10 kg. Dessa massa, 95% é água. Ela passa por um processo de desidratação até que a água passa a ser 90% da massa total. Quantos quilogramas de água foram retirados nesse processo?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 3</h3>
+        <p>Um padeiro vendia pães caseiros em unidades de 400 g. Devido a uma reestruturação, passou a vendê-los em unidades de 380 g. Qual foi a redução percentual na quantidade do produto por unidade?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 4</h3>
+        <p>Em uma indústria de laticínios são produzidos 28.000 potes de iogurte. Essa indústria deseja aumentar sua produção em 25%. Qual será a nova produção de potes de iogurte?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 5</h3>
+        <p>Ruan comprou uma bicicleta cujo preço era R$ 1.300,00. Com os acessórios opcionais, o valor total teve um acréscimo de 15%. Quanto Ruan pagou pela bicicleta com os acessórios?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 6</h3>
+        <p>Luiza recebia um salário de R$ 2.500,00 em 2022. Ela teve um aumento de 10% em 2023 e outro aumento de 15% em 2024. Podemos afirmar que Luiza teve um aumento total de 25%? Justifique.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 7</h3>
+        <p>Um fabricante de chocolate cobrava R$ 5,00 por uma barra de 250 gramas. Recentemente, o peso da barra foi reduzido para 200 gramas, mas seu preço continuou R$ 5,00. Qual foi o aumento percentual do preço do chocolate?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 8</h3>
+        <p>Um medicamento sofreu reajuste, passando de R$ 36,00 para R$ 38,16. Qual foi o reajuste percentual aplicado no preço desse medicamento?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 9</h3>
+        <p>Qual foi o acréscimo percentual na produção de petróleo de um ano para outro se a produção anual de petróleo saiu de 917 milhões de barris/dia para 922 milhões de barris/dia?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 10</h3>
+        <p>Do total de voos em um aeroporto, 10% foram cancelados por uma erupção vulcânica e dos voos restantes, 20% foram cancelados pela chuva. Qual foi o percentual total de voos cancelados?</p>
+    </div>
+
+    <a class="btn" onclick="toggleAnswers()">Ver Respostas e Soluções</a>
+
+    <div class="answers">
+        <h3>Respostas e Soluções</h3>
+        <p><strong>Questão 1:</strong> R$ 800,00.</p>
+        <p><strong>Questão 2:</strong> Foram retirados 5 kg de água.</p>
+        <p><strong>Questão 3:</strong> A redução foi de 5%.</p>
+        <p><strong>Questão 4:</strong> A nova produção será de 35.000 potes.</p>
+        <p><strong>Questão 5:</strong> Ruan pagou R$ 1.495,00.</p>
+        <p><strong>Questão 6:</strong> Não, o aumento total foi de 26,5%.</p>
+        <p><strong>Questão 7:</strong> O aumento percentual foi de 25%.</p>
+        <p><strong>Questão 8:</strong> O reajuste percentual foi de 6%.</p>
+        <p><strong>Questão 9:</strong> O acréscimo foi de aproximadamente 0,55%.</p>
+        <p><strong>Questão 10:</strong> O percentual total de voos cancelados foi de 28%.</p>
+    </div>
+</div>
+
+<script>
+    function toggleAnswers() {
+        var answers = document.querySelector('.answers');
+        if (answers.style.display === 'none' || answers.style.display === '') {
+            answers.style.display = 'block';
+        } else {
+            answers.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

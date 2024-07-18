@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .answers {
+            display: none;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Prova de Matemática</h1>
+    <p><strong>Nome:</strong> _____________________________________</p>
+    <p><strong>Série:</strong> _____________________________________</p>
+
+    <div class="question">
+        <h3>Questão 1</h3>
+        <p>Classifique os quadriláteros em relação aos lados e aos ângulos. Dê exemplos de cada tipo.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 2</h3>
+        <p>Um produto sofreu um aumento de 25% custando atualmente R$ 1.000,00. Qual era seu preço antes do aumento?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 3</h3>
+        <p>Qual é a soma dos ângulos internos de um quadrilátero?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 4</h3>
+        <p>Desenhe um plano cartesiano e localize os pontos A(2, 3) e B(4, 5). Qual é a distância entre esses pontos?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 5</h3>
+        <p>Explique a diferença entre paralelogramos e trapézios. Dê exemplos de cada.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 6</h3>
+        <p>Calcule a área de um losango cujas diagonais medem 6 cm e 8 cm.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 7</h3>
+        <p>Se um retângulo tem um comprimento de 10 cm e uma largura de 5 cm, qual é sua área e seu perímetro?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 8</h3>
+        <p>Identifique as coordenadas dos vértices de um polígono no plano cartesiano e determine seu tipo.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 9</h3>
+        <p>Um quadrado tem lado de 4 cm. Calcule sua área e seu perímetro.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 10</h3>
+        <p>Qual a importância de entender as propriedades dos quadriláteros na construção civil?</p>
+    </div>
+
+    <a class="btn" onclick="toggleAnswers()">Ver Respostas e Soluções</a>
+
+    <div class="answers">
+        <h3>Respostas e Soluções</h3>
+        <p><strong>Questão 1:</strong> Quadrados, retângulos, losangos, paralelogramos e trapézios. Exemplos: quadrado (todos os lados iguais, ângulos retos), retângulo (lados opostos iguais, ângulos retos).</p>
+        <p><strong>Questão 2:</strong> R$ 800,00.</p>
+        <p><strong>Questão 3:</strong> 360 graus.</p>
+        <p><strong>Questão 4:</strong> Distância ≈ 2,83 unidades (usando a fórmula da distância).</p>
+        <p><strong>Questão 5:</strong> Paralelogramos têm dois pares de lados paralelos; trapézios têm apenas um par de lados paralelos. Exemplos: retângulo (paralelogramo), trapézio isósceles.</p>
+        <p><strong>Questão 6:</strong> Área = (6 cm * 8 cm) / 2 = 24 cm².</p>
+        <p><strong>Questão 7:</strong> Área = 50 cm², Perímetro = 30 cm.</p>
+        <p><strong>Questão 8:</strong> Dependendo dos vértices, pode ser classificado como quadrado, retângulo, etc.</p>
+        <p><strong>Questão 9:</strong> Área = 16 cm², Perímetro = 16 cm.</p>
+        <p><strong>Questão 10:</strong> Entender as propriedades dos quadriláteros ajuda a garantir a estabilidade e a segurança das estruturas na construção civil.</p>
+    </div>
+</div>
+
+<script>
+    function toggleAnswers() {
+        var answers = document.querySelector('.answers');
+        if (answers.style.display === 'none' || answers.style.display === '') {
+            answers.style.display = 'block';
+        } else {
+            answers.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

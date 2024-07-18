@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+        }
+        .answers {
+            display: none;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Prova de Matemática</h1>
+    <p><strong>Nome:</strong> _____________________________________</p>
+    <p><strong>Série:</strong> _____________________________________</p>
+
+    <div class="question">
+        <h3>Questão 1</h3>
+        <p>Classifique os triângulos em relação aos seus lados (isósceles, equilátero e escaleno). Dê exemplos de cada tipo.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 2</h3>
+        <p>Classifique os triângulos em relação aos seus ângulos (acutângulo, retângulo e obtusângulo). Dê exemplos de cada tipo.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 3</h3>
+        <p>Desenhe um triângulo equilátero com lado de 5 cm e calcule sua área.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 4</h3>
+        <p>Se um triângulo retângulo tem catetos medindo 6 cm e 8 cm, qual é a medida da hipotenusa?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 5</h3>
+        <p>Um triângulo isósceles tem dois lados iguais medindo 7 cm e a base medindo 10 cm. Qual é a altura do triângulo?</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 6</h3>
+        <p>Explique como a estimativa de ângulos pode ajudar na classificação dos triângulos em relação aos seus ângulos.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 7</h3>
+        <p>Calcule a soma dos ângulos internos de um triângulo. Explique sua resposta.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 8</h3>
+        <p>Determine a medida dos ângulos internos de um triângulo equilátero.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 9</h3>
+        <p>Um triângulo possui ângulos internos de 30°, 60° e 90°. Classifique esse triângulo em relação aos seus ângulos.</p>
+    </div>
+
+    <div class="question">
+        <h3>Questão 10</h3>
+        <p>Qual a importância de entender as propriedades dos triângulos na construção civil?</p>
+    </div>
+
+    <a class="btn" onclick="toggleAnswers()">Ver Respostas e Soluções</a>
+
+    <div class="answers">
+        <h3>Respostas e Soluções</h3>
+        <p><strong>Questão 1:</strong> Isósceles: dois lados iguais, exemplo: triângulo com lados 5 cm, 5 cm e 8 cm. Equilátero: três lados iguais, exemplo: triângulo com lados 6 cm, 6 cm e 6 cm. Escaleno: três lados diferentes, exemplo: triângulo com lados 4 cm, 5 cm e 6 cm.</p>
+        <p><strong>Questão 2:</strong> Acutângulo: todos os ângulos menores que 90°, exemplo: triângulo com ângulos 60°, 60° e 60°. Retângulo: um ângulo igual a 90°, exemplo: triângulo com ângulos 90°, 45° e 45°. Obtusângulo: um ângulo maior que 90°, exemplo: triângulo com ângulos 120°, 30° e 30°.</p>
+        <p><strong>Questão 3:</strong> Área = (5²√3) / 4 ≈ 10,83 cm².</p>
+        <p><strong>Questão 4:</strong> Hipotenusa = √(6² + 8²) = 10 cm.</p>
+        <p><strong>Questão 5:</strong> Altura ≈ 6,93 cm (usando a fórmula da altura em um triângulo isósceles).</p>
+        <p><strong>Questão 6:</strong> Estimativa de ângulos ajuda a identificar visualmente se os ângulos são agudos, retos ou obtusos, facilitando a classificação dos triângulos.</p>
+        <p><strong>Questão 7:</strong> A soma dos ângulos internos de um triângulo é sempre 180°. Isso é uma propriedade fundamental dos triângulos.</p>
+        <p><strong>Questão 8:</strong> Cada ângulo interno de um triângulo equilátero mede 60°.</p>
+        <p><strong>Questão 9:</strong> O triângulo é retângulo porque possui um ângulo de 90°.</p>
+        <p><strong>Questão 10:</strong> Entender as propriedades dos triângulos ajuda a garantir a estabilidade e a segurança das estruturas na construção civil, especialmente em elementos como treliças e suportes.</p>
+    </div>
+</div>
+
+<script>
+    function toggleAnswers() {
+        var answers = document.querySelector('.answers');
+        if (answers.style.display === 'none' || answers.style.display === '') {
+            answers.style.display = 'block';
+        } else {
+            answers.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
