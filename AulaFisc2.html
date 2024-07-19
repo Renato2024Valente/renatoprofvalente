@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Física</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .lesson {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+        }
+        .completed {
+            background-color: #d4edda;
+        }
+        .lesson-content, .answers {
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .figure {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividades de Física</h1>
+    
+    <div class="lesson" onclick="toggleLesson(1)">
+        <h2>Aula 5 – Kepler e os movimentos dos objetos astronômicos</h2>
+        <div class="lesson-content" id="lesson-1">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT204">
+            <p><strong>Habilidade (Completa):</strong> Elaborar explicações, previsões e cálculos a respeito dos movimentos de objetos na Terra, no Sistema Solar e no Universo com base na análise das interações gravitacionais com ou sem o uso de dispositivos e aplicativos digitais.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Caracterizar um elipse e seus movimentos.</li>
+                <li>Analisar as três leis de Kepler.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Descreva as três leis de Kepler.</li>
+                <li>Explique a importância das leis de Kepler na descrição do movimento orbital dos planetas.</li>
+                <li>Utilize o simulador PhET disponível <a href="https://phet.colorado.edu/pt_BR/simulations/keplers-laws" target="_blank">aqui</a> e responda:
+                    <ul>
+                        <li>O que você percebe em relação às áreas varridas pelo segmento de reta e aos intervalos de tempo necessários para que o segmento percorra cada área?</li>
+                        <li>Observe a velocidade do planeta em sua trajetória. Ele se move mais rapidamente ou mais lentamente quando está próximo do Sol se compararmos a quando está mais afastado?</li>
+                        <li>Com base em sua resposta anterior, explique por que o planeta apresenta diferentes velocidades dependendo de sua posição em relação ao Sol.</li>
+                    </ul>
+                </li>
+                <li>Calcule a distância focal, o comprimento do semieixo maior e a excentricidade da órbita do cometa Halley com base na primeira lei de Kepler.</li>
+            </ol>
+            <button onclick="showAnswers(1)">Mostrar Respostas</button>
+            <div class="answers" id="answers-1">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Primeira lei: A órbita de cada planeta é uma elipse com o Sol em um dos focos. Segunda lei: O segmento que une o planeta ao Sol varre áreas iguais em tempos iguais. Terceira lei: O quadrado do período orbital de um planeta é proporcional ao cubo do semi-eixo maior de sua órbita.</li>
+                    <li>As leis de Kepler são fundamentais para a compreensão dos movimentos orbitais dos planetas, descrevendo com precisão suas trajetórias e velocidades.</li>
+                    <li>Resposta a ser obtida através da utilização do simulador PhET.</li>
+                    <li>
+                        <ul>
+                            <li>Distância focal: c = (R2 - R1) / 2</li>
+                            <li>Comprimento do semieixo maior: a = (R1 + R2) / 2</li>
+                            <li>Excentricidade: e = c / a</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/5 (2).pptx" target="_blank">Aula 5 - Kepler e os movimentos dos objetos astronômicos.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://pt.wikipedia.org/wiki/Leis_de_Kepler" target="_blank">Leis de Kepler - Wikipedia</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(2)">
+        <h2>Aula 6 – Newton entra em cena de novo</h2>
+        <div class="lesson-content" id="lesson-2">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT204">
+            <p><strong>Habilidade (Completa):</strong> Analisar o movimento orbital de satélites e planetas, compreender a lei da gravitação universal e os efeitos de maré.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender a lei da gravitação universal.</li>
+                <li>Analisar os efeitos de maré.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Explique a lei da gravitação universal de Newton.</li>
+                <li>Utilize o simulador PhET disponível <a href="https://phet.colorado.edu/sims/html/gravity-force-lab-basics/latest/gravity-force-lab-basics_all.html?locale=pt_BR" target="_blank">aqui</a> e responda:
+                    <ul>
+                        <li>O que ocorre com a força gravitacional quando variamos as massas dos objetos?</li>
+                        <li>O que acontece com a força quando dobramos ou reduzimos a distância entre os objetos?</li>
+                    </ul>
+                </li>
+                <li>Descreva o movimento orbital de satélites naturais e artificiais.</li>
+                <li>Explique como as marés na Terra são influenciadas pela interação gravitacional com a Lua.</li>
+            </ol>
+            <button onclick="showAnswers(2)">Mostrar Respostas</button>
+            <div class="answers" id="answers-2">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>A lei da gravitação universal de Newton estabelece que todos os corpos no universo se atraem com uma força que é proporcional ao produto de suas massas e inversamente proporcional ao quadrado da distância que os separa.</li>
+                    <li>Resposta a ser obtida através da utilização do simulador PhET.</li>
+                    <li>Os satélites naturais e artificiais seguem órbitas elípticas ou circulares ao redor de planetas, mantidos em suas trajetórias pela força gravitacional.</li>
+                    <li>As marés na Terra são causadas pela força gravitacional da Lua, que atrai as massas de água nos oceanos, criando marés altas e baixas.</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/6 (2).pptx" target="_blank">Aula 6 - Newton entra em cena de novo.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://pt.wikipedia.org/wiki/Lei_da_gravita%C3%A7%C3%A3o_universal" target="_blank">Lei da Gravitação Universal - Wikipedia</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(3)">
+        <h2>Aula 7 – Sentimo-nos atraídos sempre da mesma forma?</h2>
+        <div class="lesson-content" id="lesson-3">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT204">
+            <p><strong>Habilidade (Completa):</strong> Compreender como a lei da Gravitação Universal permite-nos calcular o campo gravitacional gerado por um determinado corpo e analisar a aceleração da gravidade em diversas situações.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Calcular a aceleração da gravidade em planetas diferentes.</li>
+                <li>Compreender como o campo gravitacional varia em diferentes situações.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Calcule a aceleração da gravidade na superfície de Marte e Júpiter.</li>
+                <li>Explique por que duas pessoas próximas não sentem os efeitos da atração gravitacional mútua.</li>
+                <li>Utilize a expressão da lei da gravitação universal para calcular a força de atração entre dois objetos de massas conhecidas a uma certa distância.</li>
+                <li>Descreva como o campo gravitacional varia em função da distância ao centro de um astro.</li>
+            </ol>
+            <button onclick="showAnswers(3)">Mostrar Respostas</button>
+            <div class="answers" id="answers-3">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Para Marte: g = (G * M) / R². Para Júpiter: g = (G * M) / R². (Substituir com os valores específicos de massa e raio).</li>
+                    <li>A força gravitacional entre duas pessoas é extremamente pequena devido à pequena massa e grande distância relativa entre elas.</li>
+                    <li>F = (G * m1 * m2) / d², onde G é a constante gravitacional, m1 e m2 são as massas e d é a distância entre os centros de massa.</li>
+                    <li>O campo gravitacional diminui com o quadrado da distância ao centro do astro, conforme a lei do inverso do quadrado da distância.</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/7 (2).pptx" target="_blank">Aula 7 - Sentimo-nos atraídos sempre da mesma forma?.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://pt.wikipedia.org/wiki/Gravita%C3%A7%C3%A3o" target="_blank">Gravitação - Wikipedia</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(4)">
+        <h2>Aula 8 – Revisão geral sobre movimentos circulares e gravitação</h2>
+        <div class="lesson-content" id="lesson-4">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT204">
+            <p><strong>Habilidade (Completa):</strong> Elaborar explicações, previsões e cálculos a respeito dos movimentos de objetos na Terra, no Sistema Solar e no Universo com base na análise das interações gravitacionais com ou sem o uso de dispositivos e aplicativos digitais.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Revisar os conteúdos sobre movimentos em curvas e gravitação.</li>
+                <li>Aplicar conhecimentos em exercícios práticos.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Descreva as leis de Kepler e sua importância.</li>
+                <li>Explique a relação entre força centrípeta e movimento circular.</li>
+                <li>Calcule a aceleração centrípeta de um objeto em uma curva com raio de 2 metros e velocidade angular de 10 rad/s.</li>
+                <li>Responda às questões da Fuvest e Unicamp sobre movimentos circulares e gravitação.</li>
+            </ol>
+            <button onclick="showAnswers(4)">Mostrar Respostas</button>
+            <div class="answers" id="answers-4">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Primeira lei de Kepler: A órbita dos planetas é uma elipse com o Sol em um dos focos. Segunda lei de Kepler: O segmento que liga um planeta ao Sol varre áreas iguais em tempos iguais. Terceira lei de Kepler: O quadrado do período orbital de um planeta é proporcional ao cubo do semi-eixo maior de sua órbita.</li>
+                    <li>A força centrípeta é a força que mantém um objeto em movimento circular, apontando sempre para o centro da trajetória.</li>
+                    <li>Aceleração centrípeta (ac) = ω² × r = 10² × 2 = 200 m/s².</li>
+                    <li>Respostas detalhadas baseadas nas questões específicas da Fuvest e Unicamp.</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/8 (2).pptx" target="_blank">Aula 8 - Revisão geral sobre movimentos circulares e gravitação.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://www.fisica.net/" target="_blank">Fisica.net - Portal de Estudo de Física</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleLesson(lessonNumber) {
+            var content = document.getElementById('lesson-' + lessonNumber);
+            var lesson = content.parentElement;
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                lesson.classList.add("completed");
+            } else {
+                content.style.display = "none";
+                lesson.classList.remove("completed");
+            }
+        }
+
+        function showAnswers(lessonNumber) {
+            var answers = document.getElementById('answers-' + lessonNumber);
+            if (answers.style.display === "none") {
+                answers.style.display = "block";
+            } else {
+                answers.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

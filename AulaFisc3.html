@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Física</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .lesson {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+        }
+        .completed {
+            background-color: #d4edda;
+        }
+        .lesson-content, .answers {
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .figure {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividades de Física</h1>
+    
+    <div class="lesson" onclick="toggleLesson(1)">
+        <h2>Aula 9 – Apocalipse ou Eclipse?</h2>
+        <div class="lesson-content" id="lesson-1">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT204">
+            <p><strong>Habilidade (Completa):</strong> Analisar os aspectos dos movimentos de rotação e translação terrestre e lunar para a compreensão das fases da Lua e dos eclipses.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender os movimentos de rotação e translação da Terra e da Lua.</li>
+                <li>Analisar as fases da Lua e os eclipses lunar e solar.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Descreva as semelhanças e diferenças entre as crenças antigas sobre eclipses e nossa compreensão atual sobre esse fenômeno.</li>
+                <li>Explique os movimentos principais da Terra e da Lua.</li>
+                <li>Descreva as fases da Lua e suas características.</li>
+                <li>Explique os tipos de eclipses solares e lunares.</li>
+                <li>Analise a questão proposta sobre a Lua na fase ilustrada e determine o ponto mais alto de sua trajetória.</li>
+            </ol>
+            <button onclick="showAnswers(1)">Mostrar Respostas</button>
+            <div class="answers" id="answers-1">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>As crenças antigas atribuíam os eclipses a fenômenos sobrenaturais, enquanto a compreensão atual é baseada na ciência astronômica e na mecânica celeste.</li>
+                    <li>A Terra realiza os movimentos de rotação (24 horas) e translação (365 dias) e a Lua realiza os movimentos de rotação, revolução ao redor da Terra e translação ao redor do Sol.</li>
+                    <li>As fases da Lua incluem nova, crescente, cheia e minguante, cada uma com suas características específicas de iluminação.</li>
+                    <li>Eclipses solares podem ser totais, parciais ou anulares, e eclipses lunares podem ser penumbrais, parciais ou totais.</li>
+                    <li>A resposta correta para a atividade é "seis horas da tarde".</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/9.pptx" target="_blank">Aula 9 - Apocalipse ou Eclipse.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://www.nationalgeographicbrasil.com/espaco/2024/04/eclipse-solar-total-de-2024-como-e-onde-podera-ser-visto-esse-evento-astronomico" target="_blank">Eclipse Solar Total - National Geographic</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(2)">
+        <h2>Aula 10 – Assim se faz a Luz...</h2>
+        <div class="lesson-content" id="lesson-2">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT209">
+            <p><strong>Habilidade (Completa):</strong> Analisar a evolução estelar associando-a aos modelos de origem e distribuição dos elementos químicos no Universo compreendendo suas relações com as condições necessárias ao surgimento de sistemas solares e planetários suas estruturas e composições e as possibilidades de existência de vida utilizando representações e simulações com ou sem o uso de dispositivos e aplicativos digitais.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Analisar a formação de novas estrelas.</li>
+                <li>Compreender a produção de energia no interior das estrelas.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Descreva as três leis de Kepler.</li>
+                <li>Explique a importância das leis de Kepler na descrição do movimento orbital dos planetas.</li>
+                <li>Utilize o simulador PhET disponível <a href="https://phet.colorado.edu/pt_BR/simulations/keplers-laws" target="_blank">aqui</a> e responda as questões propostas.</li>
+                <li>Calcule a distância focal, o comprimento do semieixo maior e a excentricidade da órbita do cometa Halley.</li>
+            </ol>
+            <button onclick="showAnswers(2)">Mostrar Respostas</button>
+            <div class="answers" id="answers-2">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Primeira lei: A órbita de cada planeta é uma elipse com o Sol em um dos focos. Segunda lei: O segmento que une o planeta ao Sol varre áreas iguais em tempos iguais. Terceira lei: O quadrado do período orbital de um planeta é proporcional ao cubo do semi-eixo maior de sua órbita.</li>
+                    <li>As leis de Kepler são fundamentais para a compreensão dos movimentos orbitais dos planetas, descrevendo com precisão suas trajetórias e velocidades.</li>
+                    <li>Resposta a ser obtida através da utilização do simulador PhET.</li>
+                    <li>
+                        <ul>
+                            <li>Distância focal: c = (R2 - R1) / 2</li>
+                            <li>Comprimento do semieixo maior: a = (R1 + R2) / 2</li>
+                            <li>Excentricidade: e = c / a</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/10.pptx" target="_blank">Aula 10 - Assim se faz a Luz.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://pt.wikipedia.org/wiki/Leis_de_Kepler" target="_blank">Leis de Kepler - Wikipedia</a></p>
+            <p><strong>Laboratório Virtual:</strong> <a href="https://www.phet.colorado.edu" target="_blank">PhET Simulations</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(3)">
+        <h2>Aula 11 – Explorando o Universo com Telescópios</h2>
+        <div class="lesson-content" id="lesson-3">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT208">
+            <p><strong>Habilidade (Completa):</strong> Compreender o funcionamento de telescópios e sua importância para a astronomia, associando-os à observação de corpos celestes e à ampliação do conhecimento sobre o Universo.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Entender como os telescópios funcionam e como são usados na astronomia.</li>
+                <li>Analisar o impacto dos telescópios na observação de corpos celestes.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Explique o funcionamento básico de um telescópio refrator e um telescópio refletor.</li>
+                <li>Descreva a importância dos telescópios para a descoberta de novos corpos celestes.</li>
+                <li>Investigue como a tecnologia dos telescópios evoluiu ao longo dos anos e suas contribuições para a astronomia moderna.</li>
+            </ol>
+            <button onclick="showAnswers(3)">Mostrar Respostas</button>
+            <div class="answers" id="answers-3">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Telescópios refratores utilizam lentes para focalizar a luz, enquanto telescópios refletores utilizam espelhos.</li>
+                    <li>A importância dos telescópios está na capacidade de observar corpos celestes distantes, ampliando o conhecimento do Universo.</li>
+                    <li>A evolução dos telescópios inclui avanços em tecnologia óptica, como telescópios espaciais e ópticas adaptativas, que têm proporcionado descobertas significativas na astronomia.</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/11.pptx" target="_blank">Aula 11 - Explorando o Universo com Telescópios.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://www.nasa.gov/mission_pages/hubble/main/index.html" target="_blank">Telescópio Espacial Hubble - NASA</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleLesson(lessonId) {
+            var lesson = document.getElementById('lesson-' + lessonId);
+            var isCompleted = lesson.classList.contains('completed');
+            var content = document.getElementById('lesson-' + lessonId);
+            
+            // Toggle content visibility
+            content.style.display = isCompleted ? 'none' : 'block';
+            // Toggle completed class
+            lesson.classList.toggle('completed');
+        }
+
+        function showAnswers(lessonId) {
+            var answers = document.getElementById('answers-' + lessonId);
+            answers.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+

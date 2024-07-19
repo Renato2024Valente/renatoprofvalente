@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .lesson {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+        }
+        .completed {
+            background-color: #d4edda;
+        }
+        .lesson-content, .answers {
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividades de Matemática</h1>
+    
+    <div class="lesson" onclick="toggleLesson(1)">
+        <h2>Aula 1 – Resolver situações-problema do cotidiano usando porcentagem (Parte 2)</h2>
+        <div class="lesson-content" id="lesson-1">
+            <p><strong>Habilidade (Abreviada):</strong> EF06MA03</p>
+            <p><strong>Habilidade (Completa):</strong> Resolver situações-problema que envolvam cálculos exatos e aproximados com porcentagem.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender e aplicar conceitos de porcentagem em situações cotidianas.</li>
+                <li>Desenvolver estratégias de resolução de problemas com cálculos mentais e escritos.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Se o preço de uma TV era de R$ 1.200,00 e foi aumentado em 15%, qual é o novo preço?</li>
+                <li>Um produto custa R$ 150,00. Se houver um desconto de 20%, qual será o preço final?</li>
+                <li>Uma loja oferece um desconto de 25% em um item que custa R$ 80,00. Quanto você pagará?</li>
+                <li>Se o preço do chocolate aumentou 10% e o preço original era R$ 50,00 por quilo, qual é o novo preço?</li>
+                <li>O preço de um celular era R$ 1.000,00 e aumentou 12%. Qual é o novo preço?</li>
+            </ol>
+            <button onclick="showAnswers(1)">Mostrar Respostas</button>
+            <div class="answers" id="answers-1">
+                <p><strong>Respostas:</strong></p>
+                
+                <ul>
+                    <li>R$ 1.200,00 + 15% = R$ 1.380,00.</li>
+                    <li>R$ 150,00 - 20% = R$ 120,00.</li>
+                    <li>R$ 80,00 - 25% = R$ 60,00.</li>
+                    <li>R$ 50,00 + 10% = R$ 55,00.</li>
+                    <li>R$ 1.000,00 + 12% = R$ 1.120,00.</li>
+                    
+                </ul>
+            </div>
+            <a href="Aulas Mat/1 .pptx" target="_blank">Aula01</a>
+            
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(2)">
+        <h2>Aula 2 – Solucionando problemas nas formas escrita e mental (Parte 2)</h2>
+        <div class="lesson-content" id="lesson-2">
+            <p><strong>Habilidade (Abreviada):</strong> EF06MA03</p>
+            <p><strong>Habilidade (Completa):</strong> Solucionar problemas que envolvam cálculos escritos e mentais com números naturais.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Desenvolver habilidades para cálculos mentais e escritos com números naturais.</li>
+                <li>Aprimorar estratégias de decomposição numérica para facilitar cálculos.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Estime a soma de 478 e 235.</li>
+                <li>Subtraia mentalmente 389 de 652.</li>
+                <li>Multiplique aproximadamente 45 por 12.</li>
+                <li>Divida mentalmente 144 por 12.</li>
+                <li>Estime a soma de 789 e 123.</li>
+            </ol>
+            <button onclick="showAnswers(2)">Mostrar Respostas</button>
+            <div class="answers" id="answers-2">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>478 + 235 ≈ 700.</li>
+                    <li>652 - 389 ≈ 260.</li>
+                    <li>45 x 12 ≈ 540.</li>
+                    <li>144 ÷ 12 = 12.</li>
+                    <li>789 + 123 ≈ 900.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/2 .pptx" target="_blank">Aula02</a>
+            
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(3)">
+        <h2>Aula 3 – Solucionando problemas com o uso de calculadora (Parte 2)</h2>
+        <div class="lesson-content" id="lesson-3">
+            <p><strong>Habilidade (Abreviada):</strong> EF06MA03</p>
+            <p><strong>Habilidade (Completa):</strong> Resolver problemas práticos utilizando a calculadora.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Desenvolver habilidades no uso de calculadora para resolver problemas matemáticos.</li>
+                <li>Compreender a importância da ordem das operações nas expressões numéricas.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Calcule 654 + 789 usando a calculadora.</li>
+                <li>Calcule 234 x 56 usando a calculadora.</li>
+                <li>Divida 987 por 23 usando a calculadora.</li>
+                <li>Subtraia 456 de 1234 usando a calculadora.</li>
+                <li>Calcule 876 + 345 usando a calculadora.</li>
+            </ol>
+            <button onclick="showAnswers(3)">Mostrar Respostas</button>
+            <div class="answers" id="answers-3">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>654 + 789 = 1443.</li>
+                    <li>234 x 56 = 13104.</li>
+                    <li>987 ÷ 23 ≈ 42,91.</li>
+                    <li>1234 - 456 = 778.</li>
+                    <li>876 + 345 = 1221.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/3 .pptx" target="_blank">Aula03</a>
+            
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(4)">
+        <h2>Aula 4 – Importância da ordem das operações nas expressões numéricas</h2>
+        <div class="lesson-content" id="lesson-4">
+            <p><strong>Habilidade (Abreviada):</strong> EF06MA03</p>
+            <p><strong>Habilidade (Completa):</strong> Compreender a importância da ordem das operações nas expressões numéricas.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Entender e aplicar a ordem correta das operações matemáticas.</li>
+                <li>Desenvolver habilidades para resolver expressões numéricas complexas.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Resolva a expressão: 8 + 6 × 2</li>
+                <li>Calcule: (8 + 6) × 2</li>
+                <li>Resolva a expressão: 15 ÷ 3 + 2 × 5</li>
+                <li>Calcule: 15 ÷ (3 + 2) × 5</li>
+                <li>Resolva a expressão: 20 - 4 × 3 + 2</li>
+            </ol>
+            <button onclick="showAnswers(4)">Mostrar Respostas</button>
+            <div class="answers" id="answers-4">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>8 + 6 × 2 = 8 + 12 = 20.</li>
+                    <li>(8 + 6) × 2 = 14 × 2 = 28.</li>
+                    <li>15 ÷ 3 + 2 × 5 = 5 + 10 = 15.</li>
+                    <li>15 ÷ (3 + 2) × 5 = 15 ÷ 5 × 5 = 3 × 5 = 15.</li>
+                    <li>20 - 4 × 3 + 2 = 20 - 12 + 2 = 10.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/4 .pptx" target="_blank">Aula04</a>
+            
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(5)">
+        <h2>Aula 5 – Problemas práticos com porcentagem</h2>
+        <div class="lesson-content" id="lesson-5">
+            <p><strong>Habilidade (Abreviada):</strong> EF06MA03</p>
+            <p><strong>Habilidade (Completa):</strong> Resolver problemas práticos envolvendo porcentagem.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Aplicar conceitos de porcentagem para resolver problemas práticos.</li>
+                <li>Desenvolver estratégias para cálculos de porcentagem em diferentes contextos.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Um vestido custa R$ 200,00 e está com 30% de desconto. Qual é o preço com desconto?</li>
+                <li>Uma loja está oferecendo 40% de desconto em todos os produtos. Quanto custa um produto de R$ 500,00 com desconto?</li>
+                <li>Se uma pessoa paga 25% de imposto sobre um produto de R$ 80,00, quanto ela paga de imposto?</li>
+                <li>Um carro custa R$ 50.000,00 e teve um aumento de 8%. Qual é o novo preço?</li>
+                <li>Se um salário de R$ 3.000,00 tem um aumento de 10%, qual será o novo salário?</li>
+            </ol>
+            <button onclick="showAnswers(5)">Mostrar Respostas</button>
+            <div class="answers" id="answers-5">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>R$ 200,00 - 30% = R$ 140,00.</li>
+                    <li>R$ 500,00 - 40% = R$ 300,00.</li>
+                    <li>25% de R$ 80,00 = R$ 20,00.</li>
+                    <li>R$ 50.000,00 + 8% = R$ 54.000,00.</li>
+                    <li>R$ 3.000,00 + 10% = R$ 3.300,00.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/5 .pptx" target="_blank">Aula05</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleLesson(lessonNumber) {
+            var content = document.getElementById('lesson-' + lessonNumber);
+            var lesson = content.parentElement;
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                lesson.classList.add("completed");
+            } else {
+                content.style.display = "none";
+                lesson.classList.remove("completed");
+            }
+        }
+
+        function showAnswers(lessonNumber) {
+            var answers = document.getElementById('answers-' + lessonNumber);
+            if (answers.style.display === "none") {
+                answers.style.display = "block";
+            } else {
+                answers.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

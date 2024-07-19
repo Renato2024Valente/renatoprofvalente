@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .lesson {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+        }
+        .completed {
+            background-color: #d4edda;
+        }
+        .lesson-content, .answers {
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        img {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividades de Matemática</h1>
+    
+    <div class="lesson" onclick="toggleLesson(1)">
+        <h2>Aula 1 – Elaborar problemas de porcentagem – Parte 2</h2>
+        <div class="lesson-content" id="lesson-1">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF06MA03">
+            <p><strong>Habilidade (Completa):</strong> Resolver e elaborar situações-problema que envolvam porcentagens com base na ideia de proporcionalidade sem fazer uso da “regra de três” utilizando estratégias pessoais, cálculo mental e calculadora em contextos de educação financeira entre outros.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender e aplicar conceitos de porcentagem em situações cotidianas.</li>
+                <li>Desenvolver estratégias de resolução de problemas com cálculos mentais e escritos.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Se o preço de uma TV era de R$ 1.200,00 e foi aumentado em 15%, qual é o novo preço?</li>
+                <li>Um produto custa R$ 150,00. Se houver um desconto de 20%, qual será o preço final?</li>
+                <li>Uma loja oferece um desconto de 25% em um item que custa R$ 80,00. Quanto você pagará?</li>
+                <li>Se o preço do chocolate aumentou 10% e o preço original era R$ 50,00 por quilo, qual é o novo preço?</li>
+                <li>O preço de um celular era R$ 1.000,00 e aumentou 12%. Qual é o novo preço?</li>
+            </ol>
+            <button onclick="showAnswers(1)">Mostrar Respostas</button>
+            <div class="answers" id="answers-1">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>R$ 1.200,00 + 15% = R$ 1.380,00.</li>
+                    <li>R$ 150,00 - 20% = R$ 120,00.</li>
+                    <li>R$ 80,00 - 25% = R$ 60,00.</li>
+                    <li>R$ 50,00 + 10% = R$ 55,00.</li>
+                    <li>R$ 1.000,00 + 12% = R$ 1.120,00.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/11.pptx" target="_blank">Aula01</a>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(2)">
+        <h2>Aula 2 – Resolver situações-problema com números inteiros – Parte 1</h2>
+        <div class="lesson-content" id="lesson-2">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF07MA04">
+            <p><strong>Habilidade (Completa):</strong> Resolver e elaborar situações-problema que envolvam operações com números inteiros.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender a importância dos números inteiros em situações práticas.</li>
+                <li>Desenvolver habilidades para resolver e elaborar problemas com números inteiros.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Um caminhão de carga começa sua viagem a -12°C. A cada hora de viagem, a temperatura sobe 3°C. Qual é a temperatura após 3 horas de viagem?</li>
+                <li>Subtraia 15 de -8.</li>
+                <li>Calcule: -5 + (-10) + (-20).</li>
+                <li>Se um carro percorre 40 km ao norte e depois 25 km ao sul, qual é a distância total percorrida?</li>
+                <li>Calcule: 25 - (-10) - 15.</li>
+            </ol>
+            <button onclick="showAnswers(2)">Mostrar Respostas</button>
+            <div class="answers" id="answers-2">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>-12 + (3 x 3) = -12 + 9 = -3°C.</li>
+                    <li>-8 - 15 = -23.</li>
+                    <li>-5 + (-10) + (-20) = -35.</li>
+                    <li>40 - 25 = 15 km.</li>
+                    <li>25 - (-10) - 15 = 25 + 10 - 15 = 20.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/11.pptx" target="_blank">Aula02</a>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(3)">
+        <h2>Aula 3 – Solucionando problemas com uso de calculadora – Parte 1</h2>
+        <div class="lesson-content" id="lesson-3">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF06MA03">
+            <p><strong>Habilidade (Completa):</strong> Solucionar e propor problemas que envolvam cálculos (mentais ou escritos, exatos ou aproximados) com números naturais, por meio de estratégias pessoais com compreensão dos processos neles envolvidos com e sem uso de calculadora.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Desenvolver habilidades no uso de calculadora para resolver problemas matemáticos.</li>
+                <li>Compreender a importância da ordem das operações nas expressões numéricas.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Calcule 654 + 789 usando a calculadora.</li>
+                <li>Calcule 234 x 56 usando a calculadora.</li>
+                <li>Divida 987 por 23 usando a calculadora.</li>
+                <li>Subtraia 456 de 1234 usando a calculadora.</li>
+                <li>Calcule 876 + 345 usando a calculadora.</li>
+            </ol>
+            <button onclick="showAnswers(3)">Mostrar Respostas</button>
+            <div class="answers" id="answers-3">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>654 + 789 = 1443.</li>
+                    <li>234 x 56 = 13104.</li>
+                    <li>987 ÷ 23 ≈ 42,91.</li>
+                    <li>1234 - 456 = 778.</li>
+                    <li>876 + 345 = 1221.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/13.pptx" target="_blank">Aula03</a>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(4)">
+        <h2>Aula 4 – Resolver problemas práticos com porcentagem – Parte 1</h2>
+        <div class="lesson-content" id="lesson-4">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF06MA03">
+            <p><strong>Habilidade (Completa):</strong> Resolver situações-problema que envolvam cálculos exatos e aproximados com porcentagem, por meio de estratégias pessoais com compreensão dos processos neles envolvidos com e sem uso de calculadora.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender e aplicar conceitos de porcentagem em situações cotidianas.</li>
+                <li>Desenvolver estratégias de resolução de problemas com cálculos mentais e escritos.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Uma camisa custa R$ 50,00 e teve um aumento de 10%. Qual é o novo preço?</li>
+                <li>Um produto custa R$ 200,00. Se houver um desconto de 15%, qual será o preço final?</li>
+                <li>Se uma loja oferece um desconto de 30% em um item que custa R$ 150,00, quanto você pagará?</li>
+                <li>Calcule 25% de R$ 80,00.</li>
+                <li>Calcule 12% de R$ 100,00.</li>
+            </ol>
+            <button onclick="showAnswers(4)">Mostrar Respostas</button>
+            <div class="answers" id="answers-4">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>R$ 50,00 + 10% = R$ 55,00.</li>
+                    <li>R$ 200,00 - 15% = R$ 170,00.</li>
+                    <li>R$ 150,00 - 30% = R$ 105,00.</li>
+                    <li>25% de R$ 80,00 = R$ 20,00.</li>
+                    <li>12% de R$ 100,00 = R$ 12,00.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/14.pptx" target="_blank">Aula04</a>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(5)">
+        <h2>Aula 5 – Resolver problemas com números inteiros – Parte 2</h2>
+        <div class="lesson-content" id="lesson-5">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF07MA04">
+            <p><strong>Habilidade (Completa):</strong> Resolver e elaborar situações-problema que envolvam operações com números inteiros.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender a importância dos números inteiros em situações práticas.</li>
+                <li>Desenvolver habilidades para resolver e elaborar problemas com números inteiros.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Em um trecho de certa rodovia foi registrado que passam 720 veículos de passeio e 180 veículos de carga por hora em dias úteis de uma semana. Aos finais de semana, o número de veículos de passeio dobra enquanto a quantidade de veículos de carga cai pela metade. Quantos veículos, tanto de passeio quanto de carga, passam por esse trecho de rodovia em uma hora nos dias úteis de uma semana?</li>
+                <li>Quantos veículos, tanto de passeio quanto de carga, passam por esse trecho de rodovia em uma hora nos fins de semana?</li>
+                <li>Quantos veículos, tanto de passeio quanto de carga, passam por esse trecho de rodovia em uma semana?</li>
+                <li>Um caminhão de carga começa sua viagem a -12°C. A cada hora de viagem, a temperatura sobe 3°C. Qual é a temperatura após 3 horas de viagem?</li>
+                <li>Subtraia 15 de -8.</li>
+            </ol>
+            <button onclick="showAnswers(5)">Mostrar Respostas</button>
+            <div class="answers" id="answers-5">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>720 + 180 = 900 veículos por hora.</li>
+                    <li>(2 x 720) + (180 / 2) = 1440 + 90 = 1530 veículos por hora.</li>
+                    <li>900 veículos/hora x 5 dias x 24 horas + 1530 veículos/hora x 2 dias x 24 horas = 108000 + 73440 = 181440 veículos por semana.</li>
+                    <li>-12 + (3 x 3) = -12 + 9 = -3°C.</li>
+                    <li>-8 - 15 = -23.</li>
+                </ul>
+            </div>
+            <a href="Aulas Mat/15.pptx" target="_blank">Aula05</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleLesson(lessonNumber) {
+            var content = document.getElementById('lesson-' + lessonNumber);
+            var lesson = content.parentElement;
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                lesson.classList.add("completed");
+            } else {
+                content.style.display = "none";
+                lesson.classList.remove("completed");
+            }
+        }
+
+        function showAnswers(lessonNumber) {
+            var answers = document.getElementById('answers-' + lessonNumber);
+            if (answers.style.display === "none") {
+                answers.style.display = "block";
+            } else {
+                answers.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

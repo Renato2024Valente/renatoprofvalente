@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Física</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .lesson {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+        }
+        .completed {
+            background-color: #d4edda;
+        }
+        .lesson-content, .answers {
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .figure {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividades de Física</h1>
+    
+    <div class="lesson" onclick="toggleLesson(1)">
+        <h2>Aula 1 – Minha bicicleta é pura Física</h2>
+        <div class="lesson-content" id="lesson-1">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT204">
+            <p><strong>Habilidade (Completa):</strong> Elaborar explicações, previsões e cálculos a respeito dos movimentos de objetos na Terra, no Sistema Solar e no Universo com base na análise das interações gravitacionais com ou sem o uso de dispositivos e aplicativos digitais.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Caracterizar as grandezas físicas fundamentais que descrevem movimentos em curvas.</li>
+                <li>Analisar o movimento circular uniforme.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Calcule o período e a frequência de um carrossel que gira com uma velocidade angular de 1 rad/s.</li>
+                <li>Converta um ângulo de 180 graus para radianos.</li>
+                <li>Explique a relação entre velocidade angular e velocidade linear.</li>
+                <li>Descreva o movimento circular uniforme em termos de período e frequência.</li>
+            </ol>
+            <button onclick="showAnswers(1)">Mostrar Respostas</button>
+            <div class="answers" id="answers-1">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Período: T = 2π / ω = 2π / 1 rad/s = 2π s ≈ 6,28 s. Frequência: f = 1 / T ≈ 0,159 Hz.</li>
+                    <li>180 graus = π radianos.</li>
+                    <li>Velocidade linear (v) = raio (r) × velocidade angular (ω).</li>
+                    <li>No movimento circular uniforme, o período é o tempo para completar uma volta e a frequência é o número de voltas por unidade de tempo.</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/1 (3).pptx" target="_blank">Aula 1 - Minha bicicleta é pura Física.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://www.comvest.unicamp.br/vest2005/F2/fis-geo.pdf" target="_blank">Movimento Circular - UNICAMP</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(2)">
+        <h2>Aula 2 – A natureza física das curvas e as curvas na natureza</h2>
+        <div class="lesson-content" id="lesson-2">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT204">
+            <p><strong>Habilidade (Completa):</strong> Compreender a velocidade e a aceleração como grandezas vetoriais e suas respectivas representações em curvas, analisando a importância da aceleração centrípeta para a descrição de curvas.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender a velocidade e a aceleração como grandezas vetoriais.</li>
+                <li>Analisar a importância da aceleração centrípeta.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Explique a diferença entre velocidade escalar média e velocidade média.</li>
+                <li>Descreva a relação entre velocidade tangencial e velocidade angular.</li>
+                <li>Calcule a aceleração centrípeta de um objeto em uma curva com raio de 2 metros e velocidade angular de 10 rad/s.</li>
+                <li>Determine a aceleração tangencial de um ciclista que aumenta sua velocidade de 5 m/s para 10 m/s em 5 segundos.</li>
+            </ol>
+            <button onclick="showAnswers(2)">Mostrar Respostas</button>
+            <div class="answers" id="answers-2">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Velocidade escalar média é a razão entre a distância total percorrida e o tempo total; velocidade média é o vetor deslocamento dividido pelo tempo total.</li>
+                    <li>Velocidade tangencial (v) = raio (r) × velocidade angular (ω).</li>
+                    <li>Aceleração centrípeta (ac) = ω² × r = 10² × 2 = 200 m/s².</li>
+                    <li>Aceleração tangencial (at) = (vf - vi) / t = (10 m/s - 5 m/s) / 5 s = 1 m/s².</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/2 (3).pptx" target="_blank">Aula 2 - A natureza física das curvas e as curvas na natureza.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://home.cern/resources/image/accelerators/lhc-images-gallery" target="_blank">Cinemática Vetorial - CERN</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(3)">
+        <h2>Aula 3 – Lançamento de martelo</h2>
+        <div class="lesson-content" id="lesson-3">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF13CNT204">
+            <p><strong>Habilidade (Completa):</strong> Compreender o motivo dos objetos se movimentarem em curvas na Dinâmica Newtoniana usando forças e a força centrípeta resultante.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender as forças resultantes em movimentos curvilíneos.</li>
+                <li>Analisar a componente tangencial e a componente centrípeta das forças resultantes.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Descreva a força centrípeta e sua relação com a trajetória circular.</li>
+                <li>Calcule a força centrípeta atuando em uma bola de massa 0,5 kg que gira com velocidade de 20 m/s em uma trajetória circular de raio 1 metro.</li>
+                <li>Explique a diferença entre força resultante tangencial e força resultante centrípeta.</li>
+                <li>Determine a aceleração tangencial de um ciclista que aumenta sua velocidade de 10 m/s para 15 m/s em 2 segundos.</li>
+            </ol>
+            <button onclick="showAnswers(3)">Mostrar Respostas</button>
+            <div class="answers" id="answers-3">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>A força centrípeta é a força que mantém um objeto em movimento circular, sempre apontando para o centro da trajetória.</li>
+                    <li>Fc = m × v² / r = 0,5 kg × (20 m/s)² / 1 m = 200 N.</li>
+                    <li>A força resultante tangencial altera a velocidade do objeto ao longo da trajetória; a força resultante centrípeta altera a direção da velocidade, mantendo o movimento circular.</li>
+                    <li>Aceleração tangencial (at) = (vf - vi) / t = (15 m/s - 10 m/s) / 2 s = 2,5 m/s².</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/3 (2).pptx" target="_blank">Aula 3 - Lançamento de martelo.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://www.olimpiadatododia.com.br/toquio-2020/jogos-olimpicos/atletismo/lancamento-de-martelo-masculino/" target="_blank">Lançamento de Martelo - Olimpíada Todo Dia</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(4)">
+        <h2>Aula 4 – A Terra é Central mas é tanto assim?</h2>
+        <div class="lesson-content" id="lesson-4">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF09GE20">
+            <p><strong>Habilidade (Completa):</strong> Compreender usando perspectivas históricas e elementos físicos alguns tipos de cosmologias como a Ptolomaica e a Copernicana.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender a evolução das cosmologias ao longo da história.</li>
+                <li>Analisar as diferenças entre os modelos geocêntrico e heliocêntrico.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Explique o modelo geocêntrico de Aristóteles e Ptolomeu.</li>
+                <li>Descreva as principais diferenças entre os modelos geocêntrico e heliocêntrico.</li>
+                <li>Identifique as contribuições de Galileu Galilei para a aceitação do modelo heliocêntrico.</li>
+                <li>Pesquise sobre a teoria da relatividade de Einstein e compare-a com as teorias de Newton.</li>
+            </ol>
+            <button onclick="showAnswers(4)">Mostrar Respostas</button>
+            <div class="answers" id="answers-4">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>O modelo geocêntrico considera a Terra como o centro do universo, com todos os astros girando ao seu redor.</li>
+                    <li>No modelo heliocêntrico, o Sol está no centro do universo e os planetas, incluindo a Terra, giram ao seu redor.</li>
+                    <li>Galileu Galilei utilizou o telescópio para observar as luas de Júpiter e as fases de Vênus, fornecendo evidências que apoiaram o modelo heliocêntrico.</li>
+                    <li>A teoria da relatividade de Einstein descreve a gravidade como a curvatura do espaço-tempo, enquanto as teorias de Newton consideram a gravidade como uma força de atração entre massas.</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="mnt/data/4 (2).pptx" target="_blank">Aula 4 - A Terra é Central mas é tanto assim?.pptx</a></p>
+            <p><strong>Link para Estudo:</strong> <a href="https://www.youtube.com/watch?v=-pfvoEJGug4" target="_blank">Vídeo sobre Cosmologia - USP</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleLesson(lessonNumber) {
+            var content = document.getElementById('lesson-' + lessonNumber);
+            var lesson = content.parentElement;
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                lesson.classList.add("completed");
+            } else {
+                content.style.display = "none";
+                lesson.classList.remove("completed");
+            }
+        }
+
+        function showAnswers(lessonNumber) {
+            var answers = document.getElementById('answers-' + lessonNumber);
+            if (answers.style.display === "none") {
+                answers.style.display = "block";
+            } else {
+                answers.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .lesson {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+        }
+        .completed {
+            background-color: #d4edda;
+        }
+        .lesson-content, .answers {
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        img {
+            width: 50px;
+        }
+        .figure {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividades de Matemática</h1>
+    
+    <div class="lesson" onclick="toggleLesson(1)">
+        <h2>Aula 1 – Quadriláteros: Reconhecimento da inclusão e intersecção de classes – Parte 2</h2>
+        <div class="lesson-content" id="lesson-1">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF06MA20">
+            <p><strong>Habilidade (Completa):</strong> Identificar características dos quadriláteros, classificá-los em relação aos lados e aos ângulos, e reconhecer a inclusão e a intersecção de classes entre eles.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Nomear um quadrilátero em função das medidas de seus lados ou de seus ângulos.</li>
+                <li>Reconhecer a inclusão e a intersecção de classes de quadriláteros por suas propriedades relativas a lados e a ângulos.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Identifique as afirmações verdadeiras:
+                    <ul>
+                        <li>Todo trapézio é quadrilátero. <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Trapézio"></li>
+                        <li>Todo retângulo é trapézio. <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Retângulo"></li>
+                        <li>Todo quadrado é retângulo. <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Quadrado"></li>
+                        <li>Todo losango é paralelogramo. <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Losango"></li>
+                        <li>Todo quadrado é losango e retângulo. <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Quadrado"></li>
+                    </ul>
+                </li>
+                <li>Organize as figuras no diagrama a seguir de acordo com as afirmações:
+                    <ul>
+                        <li>Quadrado é losango e retângulo. <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Quadrado"></li>
+                        <li>Os quadriláteros são polígonos que possuem quatro lados. <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Quadriláteros"></li>
+                        <li>Os principais quadriláteros são os trapézios e os paralelogramos que se diferenciam pelo número de lados paralelos. <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Trapézios e Paralelogramos"></li>
+                    </ul>
+                </li>
+                <li>Utilize o software de geometria disponível no link abaixo para construir os seguintes quadriláteros:
+                    <ul>
+                        <li>Paralelogramo <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Paralelogramo"></li>
+                        <li>Quadrado <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Quadrado"></li>
+                        <li>Trapézio <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Trapézio"></li>
+                    </ul>
+                    <a href="https://www.geogebra.org/classic?lang=pt_PT" target="_blank">Geogebra</a>
+                </li>
+                <li>Observe as seguintes figuras e classifique-as:
+                    <ul>
+                        <li>Retângulo <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Retângulo"></li>
+                        <li>Quadrado <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Quadrado"></li>
+                        <li>Trapézio <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Trapézio"></li>
+                        <li>Paralelogramo <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Paralelogramo"></li>
+                        <li>Losango <img src="file-2tw8ChBAaeIYSzKe36Hby4j9" class="figure" alt="Losango"></li>
+                    </ul>
+                </li>
+            </ol>
+            <button onclick="showAnswers(1)">Mostrar Respostas</button>
+            <div class="answers" id="answers-1">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Todo trapézio é quadrilátero. (Verdadeiro)</li>
+                    <li>Todo retângulo é trapézio. (Falso)</li>
+                    <li>Todo quadrado é retângulo. (Verdadeiro)</li>
+                    <li>Todo losango é paralelogramo. (Verdadeiro)</li>
+                    <li>Todo quadrado é losango e retângulo. (Verdadeiro)</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="Aulas Mat/21.pptx" target="_blank">Aula 1 - Quadriláteros.pptx</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(2)">
+        <h2>Aula 2 – Polígonos no plano cartesiano – Parte 1</h2>
+        <div class="lesson-content" id="lesson-2">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF07MA19">
+            <p><strong>Habilidade (Completa):</strong> Localizar no plano cartesiano pontos (coordenadas) que representam os vértices de um polígono e realizar transformações desses polígonos decorrentes da multiplicação das coordenadas de seus vértices por um número inteiro.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Representar pontos no plano cartesiano.</li>
+                <li>Interpretar representações de um polígono por meio de seus vértices no plano cartesiano usando suas coordenadas.</li>
+                <li>Localizar vértices de um polígono em contextos concretos por meio de suas representações em um plano cartesiano.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Localize os pontos A (2, 3) e B (3, 2) no plano cartesiano.</li>
+                <li>Reproduza as afirmações completando os espaços:
+                    <ul>
+                        <li>O ponto B tem abscissa 3 e ordenada ____.</li>
+                        <li>O ponto C tem abscissa ____ e ordenada 6.</li>
+                        <li>O ponto D tem abscissa 0 e ordenada 1.</li>
+                        <li>O ponto E tem abscissa ____ e ordenada 3.</li>
+                        <li>O ponto F é a origem do plano cartesiano.</li>
+                    </ul>
+                </li>
+                <li>Observe o sistema de coordenadas da figura e responda:
+                    <ul>
+                        <li>Qual é a abscissa do ponto A?</li>
+                        <li>Qual é a ordenada do ponto B?</li>
+                        <li>Quais as coordenadas do ponto C?</li>
+                        <li>O ponto D é indicado por: D (______).</li>
+                        <li>Ligando os pontos A, B, C e D formamos um polígono de ____ lados.</li>
+                        <li>Quais os vértices deste polígono?</li>
+                    </ul>
+                </li>
+                <li>Utilize o plano cartesiano fornecido para encontrar e marcar as seguintes coordenadas: A (4, 5).</li>
+            </ol>
+            <button onclick="showAnswers(2)">Mostrar Respostas</button>
+            <div class="answers" id="answers-2">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>O ponto B tem abscissa 3 e ordenada 8.</li>
+                    <li>O ponto C tem abscissa 2 e ordenada 6.</li>
+                    <li>O ponto D tem abscissa 0 e ordenada 1.</li>
+                    <li>O ponto E tem abscissa 0 e ordenada 3.</li>
+                    <li>O ponto F é a origem do plano cartesiano, então suas coordenadas são (0, 0).</li>
+                    <li>Qual é a abscissa do ponto A? 2</li>
+                    <li>Qual é a ordenada do ponto B? 3</li>
+                    <li>Quais as coordenadas do ponto C? (4, 6)</li>
+                    <li>O ponto D é indicado por: D (1, 5)</li>
+                    <li>Ligando os pontos A, B, C e D formamos um polígono de 4 lados.</li>
+                    <li>Quais os vértices deste polígono? A (2, 2), B (5, 3), C (4, 6) e D (1, 5).</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="Aulas Mat/22.pptx" target="_blank">Aula 2 - Polígonos no plano cartesiano.pptx</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(3)">
+        <h2>Aula 3 – Triângulos: Classificação em relação aos lados – Parte 2</h2>
+        <div class="lesson-content" id="lesson-3">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF06MA19">
+            <p><strong>Habilidade (Completa):</strong> Identificar características dos triângulos e classificá-los em relação às medidas dos lados e dos ângulos.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Identificar triângulos de acordo com as medidas de seus lados (isósceles, equilátero e escaleno).</li>
+                <li>Reconhecer a aplicação do conhecimento sobre triângulos em situações do cotidiano.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Classifique os seguintes triângulos:
+                    <ul>
+                        <li>Triângulo equilátero <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo equilátero"></li>
+                        <li>Triângulo isósceles <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo isósceles"></li>
+                        <li>Triângulo escaleno <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo escaleno"></li>
+                    </ul>
+                </li>
+                <li>Usando os triângulos construídos na Atividade 1, preencha o quadro a seguir:
+                    <ul>
+                        <li>3 lados com medidas iguais <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo equilátero"></li>
+                        <li>2 lados com medidas iguais <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo isósceles"></li>
+                        <li>3 lados com medidas diferentes <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo escaleno"></li>
+                    </ul>
+                </li>
+                <li>Identifique combinações de tábuas que formam triângulos equiláteros, isósceles e escalenos:
+                    <ul>
+                        <li>Tábua A: 15 m</li>
+                        <li>Tábua B: 2 m</li>
+                        <li>Tábua C: 3 m</li>
+                        <li>Tábua D: 4 m</li>
+                    </ul>
+                </li>
+                <li>Classifique as seguintes figuras em: equilátero, isósceles ou escaleno de acordo com as medidas representadas em centímetros.</li>
+            </ol>
+            <button onclick="showAnswers(3)">Mostrar Respostas</button>
+            <div class="answers" id="answers-3">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Triângulo equilátero: figura 1</li>
+                    <li>Triângulo escaleno: figuras 2 e 3</li>
+                    <li>Triângulo isósceles: figuras 4 e 5</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="Aulas Mat/23.pptx" target="_blank">Aula 3 - Triângulos.pptx</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(4)">
+        <h2>Aula 4 – Resolver problemas com números inteiros – Parte 2</h2>
+        <div class="lesson-content" id="lesson-4">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF07MA04">
+            <p><strong>Habilidade (Completa):</strong> Resolver e elaborar situações-problema que envolvam operações com números inteiros.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Compreender a importância dos números inteiros em situações práticas.</li>
+                <li>Desenvolver habilidades para resolver e elaborar problemas com números inteiros.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Em um trecho de certa rodovia foi registrado que passam 720 veículos de passeio e 180 veículos de carga por hora em dias úteis de uma semana. Aos finais de semana, o número de veículos de passeio dobra enquanto a quantidade de veículos de carga cai pela metade. Quantos veículos, tanto de passeio quanto de carga, passam por esse trecho de rodovia em uma hora nos dias úteis de uma semana?</li>
+                <li>Quantos veículos, tanto de passeio quanto de carga, passam por esse trecho de rodovia em uma hora nos fins de semana?</li>
+                <li>Quantos veículos, tanto de passeio quanto de carga, passam por esse trecho de rodovia em uma semana?</li>
+                <li>Um caminhão de carga começa sua viagem a -12°C. A cada hora de viagem, a temperatura sobe 3°C. Qual é a temperatura após 3 horas de viagem?</li>
+                <li>Subtraia 15 de -8.</li>
+            </ol>
+            <button onclick="showAnswers(4)">Mostrar Respostas</button>
+            <div class="answers" id="answers-4">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>720 + 180 = 900 veículos por hora.</li>
+                    <li>(2 x 720) + (180 / 2) = 1440 + 90 = 1530 veículos por hora.</li>
+                    <li>900 veículos/hora x 5 dias x 24 horas + 1530 veículos/hora x 2 dias x 24 horas = 108000 + 73440 = 181440 veículos por semana.</li>
+                    <li>-12 + (3 x 3) = -12 + 9 = -3°C.</li>
+                    <li>-8 - 15 = -23.</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="Aulas Mat/24.pptx" target="_blank">Aula 4 - Números inteiros.pptx</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(5)">
+        <h2>Aula 5 – Identificar características dos triângulos e classificá-los em relação às medidas dos lados e dos ângulos</h2>
+        <div class="lesson-content" id="lesson-5">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF06MA19">
+            <p><strong>Habilidade (Completa):</strong> Identificar características dos triângulos e classificá-los em relação às medidas dos lados e dos ângulos.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Identificar triângulos de acordo com as medidas de seus lados (isósceles, equilátero e escaleno).</li>
+                <li>Reconhecer a aplicação do conhecimento sobre triângulos em situações do cotidiano.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Classifique os seguintes triângulos:
+                    <ul>
+                        <li>Triângulo equilátero <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo equilátero"></li>
+                        <li>Triângulo isósceles <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo isósceles"></li>
+                        <li>Triângulo escaleno <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo escaleno"></li>
+                    </ul>
+                </li>
+                <li>Usando os triângulos construídos na Atividade 1, preencha o quadro a seguir:
+                    <ul>
+                        <li>3 lados com medidas iguais <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo equilátero"></li>
+                        <li>2 lados com medidas iguais <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo isósceles"></li>
+                        <li>3 lados com medidas diferentes <img src="file-GlkkjkuTQg4MtjryxyinnHrM" class="figure" alt="Triângulo escaleno"></li>
+                    </ul>
+                </li>
+                <li>Identifique combinações de tábuas que formam triângulos equiláteros, isósceles e escalenos:
+                    <ul>
+                        <li>Tábua A: 15 m</li>
+                        <li>Tábua B: 2 m</li>
+                        <li>Tábua C: 3 m</li>
+                        <li>Tábua D: 4 m</li>
+                    </ul>
+                </li>
+                <li>Classifique as seguintes figuras em: equilátero, isósceles ou escaleno de acordo com as medidas representadas em centímetros.</li>
+            </ol>
+            <button onclick="showAnswers(5)">Mostrar Respostas</button>
+            <div class="answers" id="answers-5">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>Triângulo equilátero: figura 1</li>
+                    <li>Triângulo escaleno: figuras 2 e 3</li>
+                    <li>Triângulo isósceles: figuras 4 e 5</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="Aulas Mat/25.pptx" target="_blank">Aula 5 - Triângulos.pptx</a></p>
+        </div>
+    </div>
+    
+    <div class="lesson" onclick="toggleLesson(6)">
+        <h2>Aula 6 – Polígonos: Reconhecimento e classificação no plano cartesiano</h2>
+        <div class="lesson-content" id="lesson-6">
+            <p><strong>Habilidade (Abreviada):</strong></p>
+            <img src="file-QgeTYQufoKQXq7Fj3aFRJfaw" alt="EF07MA19">
+            <p><strong>Habilidade (Completa):</strong> Localizar no plano cartesiano pontos (coordenadas) que representam os vértices de um polígono e realizar transformações desses polígonos decorrentes da multiplicação das coordenadas de seus vértices por um número inteiro.</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Representar pontos no plano cartesiano.</li>
+                <li>Interpretar representações de um polígono por meio de seus vértices no plano cartesiano usando suas coordenadas.</li>
+                <li>Localizar vértices de um polígono em contextos concretos por meio de suas representações em um plano cartesiano.</li>
+            </ul>
+            <p><strong>Atividades:</strong></p>
+            <ol>
+                <li>Localize os pontos A (2, 3) e B (3, 2) no plano cartesiano.</li>
+                <li>Reproduza as afirmações completando os espaços:
+                    <ul>
+                        <li>O ponto B tem abscissa 3 e ordenada ____.</li>
+                        <li>O ponto C tem abscissa ____ e ordenada 6.</li>
+                        <li>O ponto D tem abscissa 0 e ordenada 1.</li>
+                        <li>O ponto E tem abscissa ____ e ordenada 3.</li>
+                        <li>O ponto F é a origem do plano cartesiano.</li>
+                    </ul>
+                </li>
+                <li>Observe o sistema de coordenadas da figura e responda:
+                    <ul>
+                        <li>Qual é a abscissa do ponto A?</li>
+                        <li>Qual é a ordenada do ponto B?</li>
+                        <li>Quais as coordenadas do ponto C?</li>
+                        <li>O ponto D é indicado por: D (______).</li>
+                        <li>Ligando os pontos A, B, C e D formamos um polígono de ____ lados.</li>
+                        <li>Quais os vértices deste polígono?</li>
+                    </ul>
+                </li>
+                <li>Utilize o plano cartesiano fornecido para encontrar e marcar as seguintes coordenadas: A (4, 5).</li>
+            </ol>
+            <button onclick="showAnswers(6)">Mostrar Respostas</button>
+            <div class="answers" id="answers-6">
+                <p><strong>Respostas:</strong></p>
+                <ul>
+                    <li>O ponto B tem abscissa 3 e ordenada 8.</li>
+                    <li>O ponto C tem abscissa 2 e ordenada 6.</li>
+                    <li>O ponto D tem abscissa 0 e ordenada 1.</li>
+                    <li>O ponto E tem abscissa 0 e ordenada 3.</li>
+                    <li>O ponto F é a origem do plano cartesiano, então suas coordenadas são (0, 0).</li>
+                    <li>Qual é a abscissa do ponto A? 2</li>
+                    <li>Qual é a ordenada do ponto B? 3</li>
+                    <li>Quais as coordenadas do ponto C? (4, 6)</li>
+                    <li>O ponto D é indicado por: D (1, 5)</li>
+                    <li>Ligando os pontos A, B, C e D formamos um polígono de 4 lados.</li>
+                    <li>Quais os vértices deste polígono? A (2, 2), B (5, 3), C (4, 6) e D (1, 5).</li>
+                </ul>
+            </div>
+            <p><strong>Arquivo:</strong> <a href="Aulas Mat/26.pptx" target="_blank">Aula 6 - Polígonos no plano cartesiano.pptx</a></p>
+            <p><strong>Arquivo:</strong> <a href="Aulas Mat/27.pptx" target="_blank">Aula 7 - Polígonos no plano cartesiano.pptx</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleLesson(lessonNumber) {
+            var content = document.getElementById('lesson-' + lessonNumber);
+            var lesson = content.parentElement;
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                lesson.classList.add("completed");
+            } else {
+                content.style.display = "none";
+                lesson.classList.remove("completed");
+            }
+        }
+
+        function showAnswers(lessonNumber) {
+            var answers = document.getElementById('answers-' + lessonNumber);
+            if (answers.style.display === "none") {
+                answers.style.display = "block";
+            } else {
+                answers.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
